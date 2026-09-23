@@ -1,5 +1,5 @@
 // noise is more organic
-// always retursn a value between 0-1
+// always returns a value between 0-1
 let noiseVal;
 let seed;
 
@@ -8,8 +8,8 @@ function setup() {
     // feed a value into noise() and get a value back
     // larger the step in the argument, the bigger the jump in noise
     noiseVal = 10;
-    // seed = 1234;
-    // noiseSeed(seed); // will fix the output on subsequent runs
+    seed = 1234;
+    noiseSeed(seed); // will fix the output on subsequent runs
 }
 
 function draw() {

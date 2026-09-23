@@ -17,16 +17,14 @@ function draw() {
     noFill();
 
     let step = 64; // space in grid
-    let inc = .01; // amt to incrment noise val
+    let inc = .001; // amt to incrment noise val
     let noiseVal = random();
     rectMode(CENTER);
     // increment noiseVal every time through the loop
     for (let x = step; x < width - step; x += step) {
         for (let y = step; y < height - step; y += step) {
-            let rot = TWO_PI * noise(noiseVal);
+            let rot = TWO_PI * noise(x*inc,y*inc);
             push();
-
-            // console.log(rot);
             translate(x, y);
             rotate(rot);
             rect(0, 0, 40);

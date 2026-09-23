@@ -3,7 +3,7 @@ let randRange;
 let seed;
 
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(windowWidth, windowHeight);
     // a random seed fixes the randomness so it returns the 
     // same results each time
     seed = 1234;
@@ -15,7 +15,11 @@ function setup() {
 function draw() {
     background(220);
     textSize(32);
-    text("random: " + randVal, 100, 100);
-    text("random range: " + randRange, 100, 200);
+    for(let x = 0;x<width;x++){
+            for(let y = 0;y<height;y++){
+        stroke(floor(random(255)));
+        point(x,y);
+    }
+    }
     noLoop();
 }

@@ -15,5 +15,6 @@ function draw() {
     textSize(32);
     text("random: " + randVal, 100, 100);
     text("random range: " + randRange, 100, 200);
+    text("random int: " + floor(randRange), 100, 300);
     noLoop();
 }

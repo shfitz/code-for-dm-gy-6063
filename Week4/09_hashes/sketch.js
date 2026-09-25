@@ -18,13 +18,14 @@ function keyPressed() {
   }
 }
 
-function drawRectangle(_x, _y, _inc) {
+function drawLines(_x, _y, _inc) {
   push();
   let noiseVal = noise(_x * _inc, _y * _inc);
   translate(_x, _y);
   rotate(TWO_PI * noiseVal);
-  scale(2*noiseVal);
-  rect(0, 0, 40);
+  line(-5,-3, 5, -3);
+  line(-5,0, 5, 0);
+  line(-5,3, 5, 3);
   pop();
 }
 
@@ -42,11 +43,10 @@ function draw() {
   let step = 46; // space in grid
   let inc = .001; // amt to incrment noise val
 
-  rectMode(CENTER);
   // increment noiseVal every time through the loop
   for (let x = step; x < width - step; x += step) {
     for (let y = step; y < height - step; y += step) {
-      drawRectangle(x, y, inc); // this is our function
+      drawLines(x, y, inc); // this is our function
     }
   }
 

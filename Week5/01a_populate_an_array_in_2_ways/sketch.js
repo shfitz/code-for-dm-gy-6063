@@ -12,6 +12,9 @@ function setup() {
   // set items in the array
    names[17] = 'SCOTT';
    console.log(names[17]);
+     
+  // get the length of an array
+  // console.log(names.length);
 
   // fill an array dynamically
   for (let i = 0; i < names.length; i++) {
@@ -20,9 +23,6 @@ function setup() {
   for (let i = 0; i < nums.length; i++) {
     console.log(nums[i]);
   }
-  
-  // get the length of an array
-  // console.log(names.length);
 
 }
 

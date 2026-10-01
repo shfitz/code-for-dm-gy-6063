@@ -1,17 +1,11 @@
 // remember the history of the mouse position
 // aka - draw trails 
-// also can act as an automatic drwaing machine
 
 // number of points to remember
 let hist = 360;
 // arrays to hold mouse X * Y
 let x = [];
 let y = [];
-
-// vars for autodrawing machine
-// set to 1 for autodraw, 0 for mouse
-let autoDraw = 1;
-let incX, incY; // var for noise
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -22,8 +16,6 @@ function setup() {
     x[i] = 0;
     y[i] = 0;
   }
-  incX=0.0;
-  incY=0.0;
 }
 
 function draw() {
@@ -39,20 +31,11 @@ function draw() {
   // store the mouse X/Y in the first array item
   x[0] = mouseX;
   y[0] = mouseY;
-  // instead of mouse movement
-  // flip the autoDraw var to 1
-  // and watch it go
-  if(autoDraw){
-    x[0] = noise(incX)*width;
-    y[0] = noise(incY)*height;
-    incX +=.0049;
-    incY +=.0051;
-  }
 
   // step through the array backwards so the most
   // recent position is drawn on top 
   for (let i = hist; i > 0; i--) {
-    // earlier positions have a darker color, 'fading' away
+    // update fill color, draw the ellipse
     fill(360 - i, 100, 100);
     ellipse(x[i], y[i], (i+1), (i+1));
   }

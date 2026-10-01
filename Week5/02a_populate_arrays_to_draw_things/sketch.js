@@ -1,6 +1,6 @@
 // use arrays to store x/y of 100 circles
 
-let numCirc = 2500; // num of circles
+let numCirc = 100; // num of circles
 // arrays for locations
 let posx = [];
 let posy = [];

@@ -1,4 +1,10 @@
-# randomness
+# Libraries
+
+We're using the https://github.com/golanlevin/p5.plotSvg library to save SVG files. You need to add
+```html
+    <script src="https://cdn.jsdelivr.net/npm/p5.plotsvg@latest/dist/p5.plotSvg.js"></script>
+```
+to your index.html to access the library features.
 
 ## Getting Started
 

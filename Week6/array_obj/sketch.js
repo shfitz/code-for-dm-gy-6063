@@ -21,9 +21,7 @@ function setup() {
 
 function draw() {
     background(220);
-
     for (let i = 0; i < numBalls; i++) {
-
         fill(balls[i].h, 100, 100);
         ellipse(balls[i].x, balls[i].y, balls[i].diam);
     }

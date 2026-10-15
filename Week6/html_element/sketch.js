@@ -3,7 +3,7 @@ let mouseyEl;
 let frameRateEl;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800, 600);
   background(220, 20, 120);
 
   mousexEl = createP();
@@ -11,8 +11,8 @@ function setup() {
   frameRateEl = createP();
 
   mousexEl.position(20, 20);
-  mouseyEl.position(80, 20);
-  frameRateEl.position(20, height - 50);
+  mouseyEl.position(20, 40);
+  frameRateEl.position(20, 60);
 }
 
 function draw() {

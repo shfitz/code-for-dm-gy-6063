@@ -12,7 +12,8 @@ function setup() {
   but2.mousePressed(eraseBg);
   butx = 10;
   buty = 100;
-  
+  but1.style("background-color","orange");
+  but2.style("background-color","cornflowerblue");
   but1.position(butx, buty);
   but2.position(10, 150);
   background(0);

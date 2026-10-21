@@ -8,7 +8,7 @@ function setup() {
   polyMap = pMapper.createPolyMap(5); // how many sides?
   triMap = pMapper.createTriMap(300, 300); // dimensions
   quadMap = pMapper.createQuadMap(400, 400); // dimensions
-  lineMap = pMapper.createLineMap(1); // just a line!
+  lineMap = pMapper.createLineMap(); // just a line!
   bezMap = pMapper.createBezierMap(); // curves, can take an argument
     // loads calibration in the "maps" directory
     //pMapper.load("maps/map.json");

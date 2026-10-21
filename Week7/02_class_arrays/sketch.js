@@ -5,12 +5,12 @@ let numspheres = 20;
 class Ball {
     // the constructor is like setup()
     // it's called only once when the object is first created
-    constructor() {
+    constructor(mySize) {
         // data local to the instance is identified
         // by 'this' - like 'this object's variable' 
-        this.diam = random(20, 200);
+        this.diam = mySize;
 
-        this.col = color(random(255), random(255), random(255));
+        this.col = color(random(255), random(255), random(255), random(255));
 
         this.xpos = random(this.diam, width - this.diam);
         this.ypos = random(this.diam, height - this.diam);
@@ -43,12 +43,12 @@ class Ball {
 function setup() {
     createCanvas(800, 600);
     for (let i = 0; i < numspheres; i++) {
-        spheres.push(new Ball());
+        spheres.push(new Ball(10+i*10));
     }
 }
 
 function draw() {
-    background(255);
+   background(255);
     // call the methods in the object
     for (let i = 0; i < spheres.length; i++) {
         spheres[i].update();

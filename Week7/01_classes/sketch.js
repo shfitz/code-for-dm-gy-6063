@@ -38,11 +38,12 @@ class Ball {
         ellipse(this.xpos, this.ypos, this.diam);
     }
 }
-
+let sphere2;
 function setup() {
     createCanvas(800, 600);
     // call the constructor
     sphere = new Ball();
+    sphere2 = new Ball();
 }
 
 function draw() {
@@ -51,4 +52,12 @@ function draw() {
     sphere.update();
     sphere.wallCheck();
     sphere.render();
+
+        sphere2.update();
+    sphere2.wallCheck();
+    sphere2.render();
+}
+
+function mousePressed(){
+    console.log(sphere.xpos);
 }

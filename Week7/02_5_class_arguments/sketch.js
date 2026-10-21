@@ -4,28 +4,28 @@ function setup() {
   createCanvas(800, 600);
   background(255);
   // create a new ball with a random size
-  bouncer1 = new Ball(random(30, 100));
-  bouncer2 = new Ball(random(30, 100));
+  bouncer1 = new Ball(10);
+  bouncer2 = new Ball(100);
 }
 
 // Ball qualities
 // size, color, position
 // update pos, boundary check, draw the thing
 class Ball {
-  constructor(_mySize) { // size is determined by an argument
-    let locSize = _mySize;
+  constructor(anythingunderthesun) { // size is determined by an argument
+    // let locSize = _mySize;
     this.col = color( // color is randomly determined
       random(0, 255),
       random(0, 255),
       random(0, 255),
       random(10, 150)
     );
-    this.size = _mySize; // size has been passed as an argument
+    this.size = anythingunderthesun; // size has been passed as an argument
     this.xDir = random(-3, 3);
     this.yDir = random(-3, 3);
 
-    this.x = random(locSize / 2, width - locSize / 2);
-    this.y = random(locSize / 2, height - locSize / 2);
+    this.x = random(anythingunderthesun / 2, width - anythingunderthesun / 2);
+    this.y = random(anythingunderthesun / 2, height - anythingunderthesun / 2);
   }
 
   update() {

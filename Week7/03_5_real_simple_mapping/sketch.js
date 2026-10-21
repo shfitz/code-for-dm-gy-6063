@@ -34,13 +34,19 @@ function myDrawing(mySketch) {
     if(ballx>myQuad.width+75)ballx=-75;
 }
 function keyPressed() {
-    if (key === "c") {
-        pMapper.toggleCalibration();
-    }
-    if (key === "s") {
-        pMapper.save("map.json");
-    }
-    if (key === "l") {
-        pMapper.load("maps/map.json");
+    switch (key) {
+        case "c":
+            pMapper.toggleCalibration();
+            break;
+        case "f":
+            let fs = fullscreen();
+            fullscreen(!fs);
+            break;
+        case "l":
+            pMapper.load("maps/map.json");
+            break;
+        case "s":
+            pMapper.save("map.json");
+            break;
     }
 }

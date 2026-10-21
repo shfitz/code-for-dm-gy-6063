@@ -1,27 +1,26 @@
 let bouncer1, bouncer2; // some instances of a class
 
-// setup!
 function setup() {
   createCanvas(800, 600);
   background(255);
   // create a new ball with a random size
-  bouncer1 = new Ball(random(30, 200));
-  bouncer2 = new Ball(random(30, 200));
+  bouncer1 = new Ball(random(30, 100));
+  bouncer2 = new Ball(random(30, 100));
 }
 
-// Ball qualities. size is determined in the constructor
+// Ball qualities
 // size, color, position
 // update pos, boundary check, draw the thing
 class Ball {
-  constructor(_mySize) {
+  constructor(_mySize) { // size is determined by an argument
     let locSize = _mySize;
-    this.col = color(
+    this.col = color( // color is randomly determined
       random(0, 255),
       random(0, 255),
       random(0, 255),
-      random(0, 255)
+      random(10, 150)
     );
-    this.size = _mySize; // size is passed as an argument
+    this.size = _mySize; // size has been passed as an argument
     this.xDir = random(-3, 3);
     this.yDir = random(-3, 3);
 
@@ -48,31 +47,32 @@ class Ball {
       random(0, 255),
       random(0, 255),
       random(0, 255),
-      random(0, 255)
+      random(50, 200)
     );
   }
 }
 
-// let's draw our scene!
 function draw() {
-  background(255, 100);
+  background(255, .5);
   noStroke();
+  // update the balls
   bouncer1.update();
-  bouncer1.render();
   bouncer2.update();
+
+  //render the balls
+  bouncer1.render();
   bouncer2.render();
 
-  if (
+  // check if the balls are intersecting
+  if ( // if the distance between the center of the balls is less than the size/2
     dist(bouncer1.x, bouncer1.y, bouncer2.x, bouncer2.y) <=
     bouncer1.size / 2 + bouncer2.size / 2
   ) {
-    bouncer2.col=color(random(0, 255), random(0, 255), random(0, 255), random(0, 255));
-    bouncer1.col=color(random(0, 255), random(0, 255), random(0, 255), random(0, 255));
-
-    bouncer2.xDir *= -1;
-    bouncer1.xDir *= -1;
-    bouncer2.yDir *= -1;
-    bouncer1.yDir *= -1;
+ // set a new direction
+    bouncer2.xDir *= random(-1.5, -0.5);
+    bouncer1.xDir *= random(-1.5, -0.5);
+    bouncer2.yDir *= random(-1.5, -0.5);
+    bouncer1.yDir *= random(-1.5, -0.5);
 
     bouncer2.changeColor();
     bouncer1.changeColor();

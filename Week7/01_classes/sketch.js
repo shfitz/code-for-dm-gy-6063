@@ -46,7 +46,7 @@ function setup() {
 }
 
 function draw() {
-    background(180, 33, 220);
+    background(255);
     // call the methods in the object
     sphere.update();
     sphere.wallCheck();

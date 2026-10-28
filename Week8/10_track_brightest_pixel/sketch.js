@@ -29,11 +29,9 @@ function draw() {
       let r = capture.pixels[i];
       let g = capture.pixels[i+1];
       let b = capture.pixels[i+2];
-      // let a = capture.pixels[i+4];
       
-      // get the brightness by adding r+g+b together
-      // and dividing by 3
-      let bright = (r+g+b)/3;
+      // Perceptual luminance formula: 0.299*R + 0.587*G + 0.114*B
+      let bright = (0.299 * r + 0.587 * g + 0.114 * b);
       
       // if the current pixel's brightness is 
       // greater than the previous brightest

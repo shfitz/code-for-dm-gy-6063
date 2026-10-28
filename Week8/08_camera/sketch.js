@@ -6,7 +6,7 @@ async function setup() {
   // load a video
   cam = await createCapture(VIDEO);
   cam.size(800, 600);
-  cam.hide();
+  // cam.hide();
 }
 
 function draw() {
@@ -32,7 +32,7 @@ function draw() {
 
     // exaggerate the domiant one, but in the img
     if (maxColorValue == redValue) {
-      img.pixels[i + 0] = exaggeration;
+      img.pixels[i] = exaggeration;
     } else if (maxColorValue == greenValue) {
       img.pixels[i + 1] = exaggeration;
     } else if (maxColorValue == blueValue) {

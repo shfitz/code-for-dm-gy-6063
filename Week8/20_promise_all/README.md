@@ -1,5 +1,7 @@
 # 01_loading_images
 
+![photo of  dog](./assets/one.jpg)
+
 ## Getting Started
 
 Open `index.html` in your web browser and start editing `sketch.js`.

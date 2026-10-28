@@ -28,6 +28,10 @@ for (let i = 0; i < vid.pixels.length; i += 4) {
       vid.pixels[i] = 255;
       vid.pixels[i + 1] = 0;
       vid.pixels[i + 2] = 0;
+    } else{
+      vid.pixels[i] = 0;
+      vid.pixels[i + 1] = 0;
+      vid.pixels[i + 2] = 255;
     }
 
   }

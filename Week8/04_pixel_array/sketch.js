@@ -4,8 +4,10 @@ let diam = rad * 2;
 let xoff, yoff;
 
 async function setup() {
-  img = await loadImage("assets/blixa.jpg");
   createCanvas(800, 600);
+  pixelDensity(1);
+  img = await loadImage("assets/blixa.jpg");
+
   console.log("Original size: " + img.width + " x " + img.height);
 
   if (img.width > width) {

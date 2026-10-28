@@ -2,6 +2,7 @@ let vid;
 
 async function setup() {
   createCanvas(windowWidth, windowHeight);
+  pixelDensity(1);
   // load a video
   vid = await createVideo("assets/snow.mp4");
   vid.autoplay(); // start playing it

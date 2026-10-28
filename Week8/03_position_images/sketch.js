@@ -2,8 +2,10 @@ let doggo;
 let xoff, yoff;
 
 async function setup() {
-  doggo = await loadImage("assets/blixa_sm.jpg");
   createCanvas(800, 600);
+  pixelDensity(1);
+  doggo = await loadImage("assets/blixa_sm.jpg");
+  
   if (doggo.width > width) doggo.resize(width, 0);
   if (doggo.height > height) doggo.resize(0, height);
 

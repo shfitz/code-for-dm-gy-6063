@@ -2,6 +2,7 @@ let cam;
 
 async function setup() {
   createCanvas(800, 600);
+  pixelDensity(1);
   // load a video
   cam = await createCapture(VIDEO);
   cam.size(800, 600);

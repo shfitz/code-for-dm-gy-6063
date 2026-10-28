@@ -4,6 +4,7 @@ let disp; // hold an image to scale up
 
 async function setup() {
   createCanvas(windowWidth, windowHeight);
+  pixelDensity(1);
   disp = createGraphics(640, 480);
   // start video grabber
   capture = await createCapture(VIDEO);

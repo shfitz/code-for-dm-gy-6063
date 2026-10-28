@@ -5,6 +5,7 @@ let xoff, yoff;
 
 async function setup() {
   createCanvas(windowWidth, windowHeight);
+  pixelDensity(1);
   // load a video
   vid = await createVideo("assets/puppy.mov");
   vid.autoplay(); // start playing it

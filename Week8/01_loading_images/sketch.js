@@ -3,6 +3,7 @@ let doggo;
 async function setup() {
     doggo = await loadImage("assets/blixa.jpg");
     createCanvas(windowWidth, windowHeight);
+    pixelDensity(1);
     print("Original size: " + doggo.width + " , " + doggo.height);
     noLoop();
 }

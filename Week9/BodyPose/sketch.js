@@ -71,5 +71,9 @@ function draw() {
 function gotPoses(results) {
   // Save the output to the poses variable
   poses = results;
-  // console.log(poses);
+  
+}
+
+function mousePressed(){
+  console.log(poses[0]);
 }

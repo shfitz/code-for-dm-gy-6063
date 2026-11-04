@@ -24,10 +24,12 @@ function draw() {
     let thumbX = hands[0].thumb_tip.x;
     let thumbY = hands[0].thumb_tip.y;
 
+    // are the fingers close together?
     if(dist(fingerX, fingerY, thumbX, thumbY)<30){
       filter(POSTERIZE, 5);
     }
-
+    
+    // draw the index and thumb
     noStroke();
     fill(180, 20, 220);
     circle(fingerX, fingerY, 20);

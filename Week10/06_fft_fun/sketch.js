@@ -68,7 +68,8 @@ function draw() {
         stroke(255);
         strokeWeight(10);
         for (let i = 0; i < spectrum.length; i++) {
-            let mappedVal = map(spectrum[i], 0, .1, 0, height*6, true);
+            // values from the FFT analysis are typically very small
+            let mappedVal = map(spectrum[i], 0, .2, 0, height*6, true);
             line(i * width / spectrum.length + 10, height / 2 + mappedVal, i * width / spectrum.length + 10, height / 2 - mappedVal);
         }
 

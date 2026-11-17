@@ -1,4 +1,4 @@
-//Analyze the frequency spectrum and waveform of sounds.
+//Analyze the frequency spectrum
 let song;
 let fft;
 

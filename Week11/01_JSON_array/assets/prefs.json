@@ -1,0 +1,24 @@
+{
+  "likes": [
+    {
+      "name": "Scott",
+      "food": "donuts",
+      "drink": "coffee"
+    },
+    {
+      "name": "Stephanie",
+      "food": "bannna bread",
+      "drink": "ube lattes"
+    },
+    {
+      "name": "Blixa",
+      "food": "milk bones",
+      "drink": "puddle water"
+    },
+    {
+      "name": "Weird Cat",
+      "food": "tuna",
+      "drink": "water"
+    }
+  ]
+}

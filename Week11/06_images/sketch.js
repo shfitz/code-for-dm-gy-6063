@@ -32,5 +32,5 @@ function gotImage(poster){
   background(220);
   image(poster, 10, 10);
   // console.log(poster);
-  text("Plot: " + movie_info.Plot, poster.width+50, 10, width-poster.width+50, height);
+  text("Plot: " + movie_info.Plot, poster.width+50, 10, width-poster.width-75, height);
 }

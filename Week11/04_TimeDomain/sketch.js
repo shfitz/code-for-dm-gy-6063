@@ -24,7 +24,6 @@ function draw() {
     vertex(i*width/timeArray.length,scaledY);
   }
   endShape();
-  noLoop();
 }
 
 async function loadData(location){
@@ -35,10 +34,9 @@ async function loadData(location){
 function getTemp(data) {
   timeArray = data.hourly.time;
   tempArray = data.hourly.temperature_2m;
-  console.log(timeArray.length);
+  // console.log(timeArray.length);
   for(let i = 0; i<tempArray.length;i++){
     if(tempArray[i] > hiTemp) hiTemp = tempArray[i];
     if(tempArray[i] < loTemp) loTemp = tempArray[i];
   }
-
 }

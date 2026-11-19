@@ -1,4 +1,4 @@
-const base_url = "http://www.omdbapi.com/?apikey=29fef3f6&t=";
+const base_url = "http://www.omdbapi.com/?apikey=YOUR_API_KEY_GOES_HERE&t=";
 
 let movie_info;
 let movie_poster;
